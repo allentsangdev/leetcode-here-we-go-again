@@ -1,9 +1,14 @@
+from typing import List
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashMap = {}
+
+        hMap = {}
+
         for i in range(len(nums)):
             diff = target - nums[i]
-            if diff in hashMap:
-                return [i, hashMap[diff]]
+            if diff in hMap:
+                return [i, hMap[diff]]
             else:
-                hashMap[nums[i]] = i
+                hMap[nums[i]] = i
